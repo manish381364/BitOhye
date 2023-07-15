@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1084635980619",
+    "project_id": "bitohye",
+    "storage_bucket": "bitohye.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084635980619:android:aac5f6b3c52f602f5b7ece",
+        "android_client_info": {
+          "package_name": "com.littlebit.bitohye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084635980619-46tql0omqs3cvqiq4jugj1c14mi2p14l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.littlebit.bitohye",
+            "certificate_hash": "19ab1fffb0ad678f0793e8aaeddaa4e28c68fc40"
+          }
+        },
+        {
+          "client_id": "1084635980619-3di6un7v323j96illt5dfjb4equi747i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIiIhxRTTz_RyyW5vV5GwCzBtMuLgOA0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084635980619-3di6un7v323j96illt5dfjb4equi747i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ohye</string>
+    <string name="not_available">Feature Not Available</string>
+    <string name="not_available_subtitle">Subtite not available</string>
+    <string name="emoji_selector_bt_desc">emoji</string>
+    <string name="dm_desc">dm sd</string>
+    <string name="attach_photo_desc">attach photo desc\n</string>
+    <string name="map_selector_desc">selector\n</string>
+    <string name="videochat_desc">chat video</string>
+    <string name="send">Send\n</string>
+    <string name="textfield_desc">field</string>
+    <string name="textfield_hint">hint\n</string>
+    <string name="emoji_selector_desc">emoji</string>
+    <string name="emojis_label">emoji label</string>
+    <string name="stickers_label">label stickers</string>
+</resources>
