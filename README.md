@@ -1,6 +1,6 @@
 # BitOhye App
 
-BitOhye is a WhatsApp clone built using Jetpack Compose. It provides a modern and attractive user interface for messaging and communication.
+BitOhye is a WhatsApp clone built using Jetpack Compose. It provides a modern and attractive user interface for messaging and communication. Work is still in progress, and more features will be added soon.
 
 ## Screens
 
