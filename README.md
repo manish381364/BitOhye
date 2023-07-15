@@ -43,7 +43,7 @@ The chats screen displays the user's active conversations. It presents messages 
 
 #### Chat Screen
 
-![Chat Screen](screenshots/chat_screen.png)
+<img src="screenshots/chat_screen.png" alt="Chats" width="500">
 
 The chat screen provides a seamless messaging experience. Users can send and receive messages, view media files, and interact with various chat features in an intuitive interface.
 
