@@ -11,7 +11,6 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -52,7 +51,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -99,7 +97,7 @@ fun ProfileScreen(
             topBar = {
                 Column(Modifier.fillMaxWidth()) {
                     Spacer(modifier = Modifier.height(50.dp))
-                    ProfileTopBar2(
+                    ProfileTopBar(
                         profileImageSize,
                         scrollState = scrollState,
                         navHostController = navHostController
@@ -120,60 +118,15 @@ fun ProfileScreen(
 }
 
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-@Preview(showBackground = true)
-fun ProfileTopBar(
-    profileImageSize: MutableState<Dp> = mutableStateOf(200.dp),
-    profileURL: String = dummyImage,
-    name: String = "Dumb Man"
-) {
-    var showMenu by remember { mutableStateOf(false) }
-    Box(contentAlignment = Alignment.TopEnd) {
-        TopAppBar(
-            title = {
-                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                    AsyncImage(
-                        model = profileURL,
-                        contentDescription = "User Name",
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier
-                            .size(animateDpAsState(targetValue = profileImageSize.value).value)
-                            .clip(CircleShape)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(text = name, style = MaterialTheme.typography.titleMedium)
-                }
-            },
-            navigationIcon = {
-                IconButton(onClick = { /*TODO*/ }) {
-                    Icon(imageVector = Icons.Rounded.ArrowBack, contentDescription = "Back")
-                }
-            },
-            actions = {
-                IconButton(onClick = { showMenu = true }) {
-                    Icon(imageVector = Icons.Rounded.MoreVert, contentDescription = "Options")
-                }
-
-            },
-            modifier = Modifier.fillMaxWidth()
-        )
-        AnimatedVisibility(
-            visible = showMenu,
-        ) {
-            ProfileMenu(showMenu = showMenu, { showMenu = false })
-        }
-    }
-}
 
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 @Preview(showBackground = true)
-fun ProfileTopBar2(
+fun ProfileTopBar(
     profileImageSize: MutableState<Dp> = mutableStateOf(50.dp),
     profileURL: String = dummyImage,
-    name: String = "Dumb Man",
+    name: String = "John Doe",
     scrollState: ScrollState = rememberScrollState(),
     navHostController: NavHostController = rememberAnimatedNavController()
 ) {
@@ -207,7 +160,7 @@ fun ProfileTopBar2(
                 exit = slideOutHorizontally(targetOffsetX = { -it }) + fadeOut()
             ) {
                 Text(
-                    text = name,
+                    text = "John Doe",
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.padding(start = 20.dp)
                 )
@@ -256,7 +209,7 @@ fun ProfileMenu(
 @Composable
 fun ProfileContent(
     profileImageSize: MutableState<Dp> = mutableStateOf(100.dp),
-    name: String = "Dumb Man",
+    name: String = "John Doe",
     scrollState: ScrollState = rememberScrollState()
 ) {
     profileImageSize.value = if (scrollState.value > 0) 50.dp else 160.dp
@@ -422,7 +375,7 @@ fun ButtonsBlock() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "+9198847789393", style = MaterialTheme.typography.titleLarge)
+                    Text(text = "+91xxx888312", style = MaterialTheme.typography.titleLarge)
                     Row {
                         IconButton(onClick = { /*TODO*/ }) {
                             Icon(imageVector = Icons.Filled.Chat, contentDescription = "Chat")
@@ -507,7 +460,10 @@ fun MediaLinksDocs() {
             Text(text = "Media,links, and docs")
             Text(text = "200 >")
         }
-        LazyRow(Modifier.padding(6.dp)) {
+        LazyRow(
+            Modifier.padding(2.dp)
+                .background(MaterialTheme.colorScheme.onSurface.copy(0.001f))
+        ) {
             items(10) {
                 AsyncImage(
                     model = "", contentDescription = "Image", modifier = Modifier

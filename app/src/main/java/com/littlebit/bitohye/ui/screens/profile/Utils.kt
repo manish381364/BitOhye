@@ -39,4 +39,4 @@ val menuItems = listOf<ProfileMenuItem>(
         icon = Icons.Rounded.Security
     ) { /*TODO*/ },
 )
-val dummyImage = "https://i.pinimg.com/originals/25/78/61/25786134576ce0344893b33a051160b1.jpg"
+const val dummyImage = "https://picsum.photos/200/300"

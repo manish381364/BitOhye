@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -89,110 +90,109 @@ fun ChattingOptions(
     showAttachmentRow: MutableState<Boolean>
 ) {
     val inputText = remember { mutableStateOf("") }
-    OhyeTheme {
-        Row(
-            modifier
-                .padding(1.dp)
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+
+    Row(
+        modifier
+            .padding(paddingValues = PaddingValues(4.dp))
+            .fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Surface(
+            modifier = Modifier.weight(1f),
+            shape = RoundedCornerShape(50),
         ) {
-            Surface(
-                modifier = Modifier.weight(1f),
-                shape = RoundedCornerShape(50),
-            ) {
-                TextField(
-                    value = inputText.value,
-                    onValueChange = { inputText.value = it },
-                    maxLines = 6,
-                    modifier = Modifier
-                        .verticalScroll(rememberScrollState())
-                        .requiredHeightIn(min = 50.dp, max = 150.dp),
-                    placeholder = {
-                        Text(
-                            text = "Message",
-                            style = TextStyle(
-                                fontSize = MaterialTheme.typography.titleMedium.fontSize,
-                                fontWeight = FontWeight.Normal
-                            )
+            TextField(
+                value = inputText.value,
+                onValueChange = { inputText.value = it },
+                maxLines = 6,
+                modifier = Modifier
+                    .verticalScroll(rememberScrollState())
+                    .requiredHeightIn(min = 50.dp, max = 150.dp),
+                placeholder = {
+                    Text(
+                        text = "Message",
+                        style = TextStyle(
+                            fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                            fontWeight = FontWeight.Normal
                         )
-                    },
-                    leadingIcon = {
+                    )
+                },
+                leadingIcon = {
+                    IconButton(
+                        onClick = {},
+                        modifier = Modifier.size(25.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.EmojiEmotions,
+                            contentDescription = "Mic"
+                        )
+
+                    }
+                },
+                trailingIcon = {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         IconButton(
-                            onClick = {},
+                            onClick = {
+                                showBottomSheetDialog()
+                                showAttachmentRow.value = !showAttachmentRow.value
+                            },
+                            modifier = Modifier
+                                .size(25.dp)
+                                .onFocusChanged { focusState ->
+                                    if (!focusState.isFocused && !showAttachmentRow.value) {
+                                        showAttachmentRow.value = false
+                                    }
+                                }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Rounded.AttachFile,
+                                contentDescription = "AttachFile",
+                                modifier = Modifier.rotate(120f)
+                            )
+                        }
+                        Spacer(Modifier.width(16.dp))
+                        IconButton(
+                            onClick = { /*TODO*/ },
                             modifier = Modifier.size(25.dp)
                         ) {
                             Icon(
-                                imageVector = Icons.Default.EmojiEmotions,
-                                contentDescription = "Mic"
+                                imageVector = Icons.Rounded.PhotoCamera,
+                                contentDescription = "PhotoCamera"
                             )
-
                         }
-                    },
-                    trailingIcon = {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            IconButton(
-                                onClick = {
-                                    showBottomSheetDialog()
-                                    showAttachmentRow.value = !showAttachmentRow.value
-                                },
-                                modifier = Modifier
-                                    .size(25.dp)
-                                    .onFocusChanged { focusState ->
-                                        if (!focusState.isFocused && !showAttachmentRow.value) {
-                                            showAttachmentRow.value = false
-                                        }
-                                    }
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Rounded.AttachFile,
-                                    contentDescription = "AttachFile",
-                                    modifier = Modifier.rotate(120f)
-                                )
-                            }
-                            Spacer(Modifier.width(16.dp))
-                            IconButton(
-                                onClick = { /*TODO*/ },
-                                modifier = Modifier.size(25.dp)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Rounded.PhotoCamera,
-                                    contentDescription = "PhotoCamera"
-                                )
-                            }
-                            Spacer(Modifier.width(12.dp))
-                        }
-                    },
-                    colors = TextFieldDefaults.textFieldColors(
-                        focusedIndicatorColor = Color.Transparent,
-                        unfocusedIndicatorColor = Color.Transparent,
-                        cursorColor = MaterialTheme.colorScheme.primary,
-                    ),
-                    textStyle = TextStyle(
-                        fontSize = MaterialTheme.typography.titleMedium.fontSize,
-                        fontWeight = FontWeight.Normal
-                    ),
-                )
-            }
-            Spacer(Modifier.width(4.dp))
-            Surface(
-                color = if (isSystemInDarkTheme()) MaterialTheme.colorScheme.inversePrimary else MaterialTheme.colorScheme.primary,
-                shape = CircleShape
-            ) {
-                IconButton(
-                    modifier = Modifier.clip(CircleShape),
-                    onClick = {
-
+                        Spacer(Modifier.width(12.dp))
                     }
-                ) {
-                    if (inputText.value.isEmpty())
-                        Icon(imageVector = Icons.Default.Mic, contentDescription = "Mic")
-                    else
-                        Icon(
-                            imageVector = Icons.Filled.Send,
-                            contentDescription = "Send"
-                        )
+                },
+                colors = TextFieldDefaults.textFieldColors(
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    cursorColor = MaterialTheme.colorScheme.primary,
+                ),
+                textStyle = TextStyle(
+                    fontSize = MaterialTheme.typography.titleMedium.fontSize,
+                    fontWeight = FontWeight.Normal
+                ),
+            )
+        }
+        Spacer(Modifier.width(4.dp))
+        Surface(
+            color = if (isSystemInDarkTheme()) MaterialTheme.colorScheme.inversePrimary else MaterialTheme.colorScheme.primary,
+            shape = CircleShape
+        ) {
+            IconButton(
+                modifier = Modifier.clip(CircleShape),
+                onClick = {
+
                 }
+            ) {
+                if (inputText.value.isEmpty())
+                    Icon(imageVector = Icons.Default.Mic, contentDescription = "Mic")
+                else
+                    Icon(
+                        imageVector = Icons.Filled.Send,
+                        contentDescription = "Send"
+                    )
             }
         }
     }
@@ -227,7 +227,7 @@ fun ChatTopBar(
         title = {
             Row(
                 Modifier.clickable {
-                    navHostController.navigate(Screens.ProfileScreen.route){
+                    navHostController.navigate(Screens.ProfileScreen.route) {
                         launchSingleTop = true
                     }
                 }
@@ -276,10 +276,12 @@ fun ChatTopBar(
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
-            ){
+            ) {
                 IconButton(
                     onClick = { /*TODO*/ },
-                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(contentColor = MaterialTheme.colorScheme.onPrimary) else IconButtonDefaults.iconButtonColors(
+                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    ) else IconButtonDefaults.iconButtonColors(
                         contentColor = MaterialTheme.colorScheme.onSurface
                     )
                 ) {
@@ -287,7 +289,9 @@ fun ChatTopBar(
                 }
                 IconButton(
                     onClick = { /*TODO*/ },
-                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(contentColor = MaterialTheme.colorScheme.onPrimary) else IconButtonDefaults.iconButtonColors(
+                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    ) else IconButtonDefaults.iconButtonColors(
                         contentColor = MaterialTheme.colorScheme.onSurface
                     )
                 ) {
@@ -295,7 +299,9 @@ fun ChatTopBar(
                 }
                 IconButton(
                     onClick = { /*TODO*/ },
-                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(contentColor = MaterialTheme.colorScheme.onPrimary) else IconButtonDefaults.iconButtonColors(
+                    colors = if (isSystemInDarkTheme()) IconButtonDefaults.iconButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    ) else IconButtonDefaults.iconButtonColors(
                         contentColor = MaterialTheme.colorScheme.onSurface
                     )
                 ) {
@@ -430,7 +436,7 @@ fun ChatBody() {
                 modifier = Modifier
                     .align(Alignment.End)
                     .fillMaxWidth(0.8f),
-                text = "Hello World how are the things going on? and when are you coming to my place? lets have a party there. See more new features of the compose and explore it further Hello World how are the things going on? and when are you coming to my place? lets have a party there. See more new features of the compose and explore it further",
+                text = "Hello there how are the things going on? and when are you coming to my place? lets have a party there. See more new features of the compose and explore it further.",
             )
             ChatBubble(
                 isSender = false,

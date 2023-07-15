@@ -22,6 +22,13 @@ The home screen is the main screen of the app, where users can see their recent 
 
 The search screen enables users to search for specific contacts or conversations. It has a modern search bar design and displays search results in real-time as the user types.
 
+#### Search Animation
+
+![Search Animation](screenshots/search_animation.gif)
+
+The search animation showcases the dynamic search experience in action. It provides a visually engaging and interactive way for users to find what they are looking for.
+
+
 ### 4. Country Code Search
 
 <img src="screenshots/country_select.png" alt="Country Code Search" width="500">
@@ -39,6 +46,12 @@ The chats screen displays the user's active conversations. It presents messages 
 <img src="screenshots/settings.png" alt="Settings" width="500">
 
 The settings screen allows users to customize their app preferences and account settings. It offers a visually appealing interface with neatly organized options and intuitive navigation.
+
+#### Profile Animation
+
+![Profile Animation](screenshots/profile_animation.gif)
+
+The profile animation demonstrates the smooth and interactive profile experience. Users can easily view and manage their profile information with delightful animations.
 
 ## Requirements
 
