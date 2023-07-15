@@ -24,7 +24,7 @@ The search screen enables users to search for specific contacts or conversations
 
 #### Search Animation
 
-![Search Animation](screenshots/search_animation.gif)
+<img src="screenshots/search_animation.gif" alt="Chats" width="300">
 
 The search animation showcases the dynamic search experience in action. It provides a visually engaging and interactive way for users to find what they are looking for.
 
