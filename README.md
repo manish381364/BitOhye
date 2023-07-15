@@ -41,6 +41,13 @@ The country code search screen assists users in selecting the appropriate countr
 
 The chats screen displays the user's active conversations. It presents messages in a threaded format with sender avatars and timestamps. The interface is designed for easy readability and quick access to chat functionalities.
 
+#### Chat Screen
+
+![Chat Screen](screenshots/chat_screen.png)
+
+The chat screen provides a seamless messaging experience. Users can send and receive messages, view media files, and interact with various chat features in an intuitive interface.
+
+
 ### 6. Settings
 
 <img src="screenshots/settings.png" alt="Settings" width="500">
