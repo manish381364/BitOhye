@@ -12,13 +12,13 @@ The phone authentication screen allows users to enter their phone number to veri
 
 ### 2. Home
 
-<img src="screenshots/home.png" alt="Home" width="500">
+<img src="screenshots/home.png" alt="Home" width="300">
 
 The home screen is the main screen of the app, where users can see their recent chats, group chats, and contact list. It has a clean and intuitive layout, with smooth transitions and animations.
 
 ### 3. Search
 
-<img src="screenshots/search.png" alt="Search" width="500">
+<img src="screenshots/search.png" alt="Search" width="300">
 
 The search screen enables users to search for specific contacts or conversations. It has a modern search bar design and displays search results in real-time as the user types.
 
@@ -31,26 +31,26 @@ The search animation showcases the dynamic search experience in action. It provi
 
 ### 4. Country Code Search
 
-<img src="screenshots/country_select.png" alt="Country Code Search" width="500">
+<img src="screenshots/country_select.png" alt="Country Code Search" width="300">
 
 The country code search screen assists users in selecting the appropriate country code when entering their phone number. It offers a user-friendly search functionality to quickly find the desired country code.
 
 ### 5. Chats
 
-<img src="screenshots/chats.png" alt="Chats" width="500">
+<img src="screenshots/chats.png" alt="Chats" width="300">
 
 The chats screen displays the user's active conversations. It presents messages in a threaded format with sender avatars and timestamps. The interface is designed for easy readability and quick access to chat functionalities.
 
 #### Chat Screen
 
-<img src="screenshots/chat_screen.png" alt="Chats" width="500">
+<img src="screenshots/chat_screen.png" alt="Chats" width="300">
 
 The chat screen provides a seamless messaging experience. Users can send and receive messages, view media files, and interact with various chat features in an intuitive interface.
 
 
 ### 6. Settings
 
-<img src="screenshots/settings.png" alt="Settings" width="500">
+<img src="screenshots/settings.png" alt="Settings" width="300">
 
 The settings screen allows users to customize their app preferences and account settings. It offers a visually appealing interface with neatly organized options and intuitive navigation.
 
