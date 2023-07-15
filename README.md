@@ -63,7 +63,8 @@ The profile animation demonstrates the smooth and interactive profile experience
 ## Requirements
 
 - Android 7	API Level 24 Android 7.0 (Nougat) or higher
-- Jetpack Compose 1.0.0 or higher
+- Jetpack Compose 1.4.6 or higher
+- Kotlin 1.8.20 or higher
 
 ## Installation
 
