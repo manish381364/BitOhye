@@ -24,7 +24,7 @@ The search screen enables users to search for specific contacts or conversations
 
 #### Search Animation
 
-<img src="screenshots/search_animation.gif" alt="Chats" width="300">
+<img src="screenshots/search_animation.gif" alt="Chat animation" width="300">
 
 The search animation showcases the dynamic search experience in action. It provides a visually engaging and interactive way for users to find what they are looking for.
 
@@ -43,7 +43,7 @@ The chats screen displays the user's active conversations. It presents messages 
 
 #### Chat Screen
 
-<img src="screenshots/chat_screen.png" alt="Chats" width="300">
+<img src="screenshots/chat_screen.png" alt="Chat Screen" width="300">
 
 The chat screen provides a seamless messaging experience. Users can send and receive messages, view media files, and interact with various chat features in an intuitive interface.
 
