@@ -6,7 +6,7 @@ BitOhye is a WhatsApp clone built using Jetpack Compose. It provides a modern an
 
 ### 1. Phone Authentication
 
-<img src="screenshots/phone_auth.png" alt="Phone Authentication" width="500">
+<img src="screenshots/phone_auth.png" alt="Phone Authentication" width="300">
 
 The phone authentication screen allows users to enter their phone number to verify their identity and log into the app. It features a sleek and minimalistic design.
 
