@@ -6,43 +6,43 @@ BitOhye is a WhatsApp clone built using Jetpack Compose. It provides a modern an
 
 ### 1. Phone Authentication
 
-![Phone Authentication](screenshots/phone_auth.png)
+<img src="screenshots/phone_auth.png" alt="Phone Authentication" width="500">
 
 The phone authentication screen allows users to enter their phone number to verify their identity and log into the app. It features a sleek and minimalistic design.
 
 ### 2. Home
 
-![Home](screenshots/home.png)
+<img src="screenshots/home.png" alt="Home" width="500">
 
 The home screen is the main screen of the app, where users can see their recent chats, group chats, and contact list. It has a clean and intuitive layout, with smooth transitions and animations.
 
 ### 3. Search
 
-![Search](screenshots/search.png)
+<img src="screenshots/search.png" alt="Search" width="500">
 
 The search screen enables users to search for specific contacts or conversations. It has a modern search bar design and displays search results in real-time as the user types.
 
 ### 4. Country Code Search
 
-![Country Code Search](screenshots/country_select.png)
+<img src="screenshots/country_select.png" alt="Country Code Search" width="500">
 
 The country code search screen assists users in selecting the appropriate country code when entering their phone number. It offers a user-friendly search functionality to quickly find the desired country code.
 
 ### 5. Chats
 
-![Chats](screenshots/chats.png)
+<img src="screenshots/chats.png" alt="Chats" width="500">
 
 The chats screen displays the user's active conversations. It presents messages in a threaded format with sender avatars and timestamps. The interface is designed for easy readability and quick access to chat functionalities.
 
 ### 6. Settings
 
-![Settings](screenshots/settings.png)
+<img src="screenshots/settings.png" alt="Settings" width="500">
 
 The settings screen allows users to customize their app preferences and account settings. It offers a visually appealing interface with neatly organized options and intuitive navigation.
 
 ## Requirements
 
-- Android 6.0 (Marshmallow) or higher
+- Android 7	API Level 24 Android 7.0 (Nougat) or higher
 - Jetpack Compose 1.0.0 or higher
 
 ## Installation
