@@ -37,7 +37,7 @@ The country code search screen assists users in selecting the appropriate countr
 
 #### Search Bar Animation
 
-<img src="screenshots/country_search_anim.png" alt="Chat Screen" width="300">
+<img src="screenshots/country_search_anim.gif" alt="Chat Screen" width="300">
 
 The search bar animation demonstrates the smooth and interactive search experience. Users can easily find the desired country code with delightful animations.
 
