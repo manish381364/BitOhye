@@ -35,6 +35,12 @@ The search animation showcases the dynamic search experience in action. It provi
 
 The country code search screen assists users in selecting the appropriate country code when entering their phone number. It offers a user-friendly search functionality to quickly find the desired country code.
 
+#### Search Bar Animation
+
+<img src="screenshots/country_search_anim.png" alt="Chat Screen" width="300">
+
+The search bar animation demonstrates the smooth and interactive search experience. Users can easily find the desired country code with delightful animations.
+
 ### 5. Chats
 
 <img src="screenshots/chats.png" alt="Chats" width="300">
